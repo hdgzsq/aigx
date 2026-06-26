@@ -1,8 +1,0 @@
-﻿{
-  "build": {
-    "command": "echo 'No build needed'",
-    "output": "frontend",
-    "directory": "frontend"
-  },
-  "routes": ["*.huang.me/*"]
-}
