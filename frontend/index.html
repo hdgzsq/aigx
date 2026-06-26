@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI文案改写工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI文案改写工具</h1>
+            <p class="subtitle">输入文案，选择风格，一键生成多风格改写版本</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="input-section">
+                    <label for="textInput">输入文案</label>
+                    <textarea id="textInput" placeholder="请输入需要改写的文案...&#10;&#10;例如：这款咖啡采用优质阿拉比卡豆，经过精心烘焙，口感醇厚，香气浓郁。"></textarea>
+                    <div class="controls">
+                        <div class="style-selector">
+                            <label for="styleSelect">选择风格</label>
+                            <select id="styleSelect">
+                                <option value="轻松活泼">轻松活泼</option>
+                                <option value="小红书种草">小红书种草</option>
+                                <option value="商务">商务</option>
+                                <option value="口播">口播</option>
+                            </select>
+                        </div>
+                        <button id="generateBtn" class="btn-primary">
+                            <span class="btn-icon">✨</span>
+                            一键改写
+                        </button>
+                    </div>
+                </div>
+
+                <div class="output-section">
+                    <div class="output-header">
+                        <label>改写结果</label>
+                        <div class="output-actions">
+                            <button id="copyBtn" class="btn-secondary" disabled title="复制结果">📋 复制</button>
+                            <button id="clearBtn" class="btn-secondary" disabled title="清空结果">🗑️ 清空</button>
+                        </div>
+                    </div>
+                    <div id="outputArea" class="output-area">
+                        <span class="placeholder-text">改写后的文案将显示在这里...</span>
+                    </div>
+                </div>
+
+                <div id="loadingIndicator" class="loading-indicator" style="display:none;">
+                    <div class="spinner"></div>
+                    <span>正在改写中...</span>
+                </div>
+
+                <div id="errorArea" class="error-area" style="display:none;"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Agnes AI / OpenAI 兼容接口</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
